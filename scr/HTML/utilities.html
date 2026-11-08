@@ -1,173 +1,219 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-bs-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utility Classes - Học Bootstrap 5 - TVU</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lớp Tiện ích - Học Bootstrap 5.3 - TVU</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../CSS/style.css" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-tvu sticky-top shadow-sm py-2">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="../../index.html">
+          <i class="bi bi-mortarboard-fill text-warning me-2 fs-5"></i>
+          <span>TVU - CƠ SỞ NGÀNH CNTT</span>
+        </a>
+        <div class="d-flex align-items-center order-lg-3 ms-auto ms-lg-3">
+          <button class="btn btn-outline-light btn-sm me-2" id="themeToggleBtn" type="button">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            <span class="ms-1" id="themeText">Tối</span>
+          </button>
+          <a class="btn btn-warning btn-sm fw-semibold me-2 me-lg-0" href="feedback.html">
+            Góp ý
+          </a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#tvuNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="tvuNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Trang chủ</a></li>
+            <li class="nav-item"><a class="nav-link" href="grid.html">Hệ thống Lưới</a></li>
+            <li class="nav-item"><a class="nav-link" href="components.html">Thành phần UI</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="utilities.html">Lớp Tiện ích</a></li>
+            <li class="nav-item"><a class="nav-link" href="evaluation.html">Đánh giá & So sánh</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-tvu sticky-top shadow-sm py-2">
-            <div class="container-fluid px-lg-4">
-                <a class="navbar-brand fw-bold d-flex align-items-center" href="../../index.html">
-                    <i class="bi bi-mortarboard-fill text-warning me-2 fs-4"></i>
-                    <span>TVU - CƠ SỞ NGÀNH CNTT</span>
-                </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#tvuNavbarContent" aria-controls="tvuNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="tvuNavbarContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../../index.html">Trang chủ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="grid.html">Hệ thống Lưới</a></li>
-                        <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="utilities.html">Utilities</a></li>
-                        <li class="nav-item"><a class="nav-link" href="evaluation.html">Đánh giá</a></li>
-                    </ul>
-                    <a href="feedback.html" class="btn btn-warning btn-sm ms-lg-3 fw-semibold">
-                        <i class="bi bi-pencil-square me-1"></i> Đóng góp ý kiến
-                    </a>
-                </div>
+  <div class="container my-4">
+    <div class="row g-4">
+        <aside class="col-12 col-lg-3">
+          <div class="d-lg-none mb-2">
+            <button class="btn btn-outline-primary w-100 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+              Danh mục bài học
+            </button>
+          </div>
+          <div class="collapse d-lg-block" id="sidebarMenu">
+            <div class="sidebar-sticky shadow-sm">
+              <div class="sidebar-title">Danh mục bài học</div>
+              <div class="list-group list-group-tvu list-group-flush">
+              <a class="list-group-item list-group-item-action" href="../../index.html">Tổng quan & Lịch sử</a>
+              <a class="list-group-item list-group-item-action" href="grid.html">1. Hệ thống Lưới</a>
+              <a class="list-group-item list-group-item-action" href="components.html">2. Thành phần UI</a>
+              <a class="list-group-item list-group-item-action active" href="utilities.html">3. Lớp Tiện ích</a>
+              <a class="list-group-item list-group-item-action" href="evaluation.html">4. Đánh giá & So sánh</a>
+              <a class="list-group-item list-group-item-action" href="feedback.html">5. Thực hành Form</a>
+              </div>
+              <div class="mt-3 pt-3 border-top small text-muted">
+                <div class="fw-semibold text-primary mb-1">Thông tin Đồ án</div>
+                <div>SV: Nguyễn Quốc Nam</div>
+                <div>MSSV: 110124128</div>
+                <div>Lớp: DA24TTC</div>
+                <div>GVHD: TS. Đoàn Phước Miền</div>
+              </div>
             </div>
+          </div>
+        </aside>
+
+      <main class="col-12 col-lg-9">
+        <section class="mb-4">
+          <h2 class="section-heading">1. Triết lý Utility-First và Quy ước đặt tên Spacing</h2>
+          <div class="content-card shadow-sm">
+            <p class="mb-3">
+              <strong>Utility Classes</strong> là các lớp CSS nguyên tử giúp căn chỉnh khoảng cách, màu sắc, đường viền và Flexbox trực tiếp trên thẻ HTML mà không cần viết thêm quy tắc CSS rời. Cú pháp tổng quát của nhóm khoảng cách là <code>{thuộc tính}{hướng}-{kích thước}</code>:
+            </p>
+            <div class="table-responsive">
+              <table class="table table-bordered breakpoint-table align-middle text-center mb-0">
+                <thead>
+                  <tr>
+                    <th>Thành phần</th>
+                    <th>Ký hiệu</th>
+                    <th>Ý nghĩa</th>
+                    <th>Thang đo kích thước</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-semibold">Thuộc tính</td>
+                    <td><code>m</code> / <code>p</code></td>
+                    <td>Lề ngoài <code>margin</code> / Đệm trong <code>padding</code></td>
+                    <td rowspan="3" class="text-start">
+                      <code>0</code> = 0rem<br>
+                      <code>1</code> = 0.25rem<br>
+                      <code>2</code> = 0.5rem<br>
+                      <code>3</code> = 1.0rem<br>
+                      <code>4</code> = 1.5rem<br>
+                      <code>5</code> = 3.0rem
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold">Hướng cạnh</td>
+                    <td><code>t</code>, <code>b</code>, <code>s</code>, <code>e</code></td>
+                    <td>Trên <code>top</code>, Dưới <code>bottom</code>, Bắt đầu <code>start</code>, Kết thúc <code>end</code></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold">Hướng trục</td>
+                    <td><code>x</code>, <code>y</code></td>
+                    <td>Trục ngang trái-phải / Trục dọc trên-dưới</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="section-heading">2. Bàn thử nghiệm Utility trực tiếp</h2>
+          <div class="content-card shadow-sm">
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-4">
+                <label class="form-label small fw-semibold">Khoảng đệm Padding</label>
+                <select class="form-select form-select-sm" id="utilPad">
+                  <option value="p-2">p-2</option>
+                  <option value="p-3" selected>p-3</option>
+                  <option value="p-4">p-4</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label small fw-semibold">Màu nền &amp; Chữ</label>
+                <select class="form-select form-select-sm" id="utilBg">
+                  <option value="bg-primary text-white" selected>bg-primary text-white</option>
+                  <option value="bg-success text-white">bg-success text-white</option>
+                  <option value="bg-warning text-dark">bg-warning text-dark</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label small fw-semibold">Bo góc &amp; Bóng đổ</label>
+                <select class="form-select form-select-sm" id="utilRound">
+                  <option value="rounded-2 shadow-sm">rounded-2 shadow-sm</option>
+                  <option value="rounded-4 shadow" selected>rounded-4 shadow</option>
+                </select>
+              </div>
+            </div>
+            <div id="utilTarget" class="p-3 bg-primary text-white rounded-4 shadow text-center fw-bold mb-3">
+              Khối minh họa áp dụng trực tiếp các lớp Utility của Bootstrap 5.3
+            </div>
+            <div class="code-box" id="utilCode">
+              class="p-3 bg-primary text-white rounded-4 shadow"
+            </div>
+          </div>
+        </section>
+
+        <nav class="page-nav-bottom shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-2" aria-label="Điều hướng chuyển trang">
+          <a class="btn btn-outline-primary fw-semibold" href="components.html"><i class="bi bi-arrow-left me-1"></i> Trước: Bài 2 - Thành phần UI</a>
+          <a class="btn btn-light border btn-sm text-secondary" href="#">Lên đầu trang</a>
+          <a class="btn btn-primary fw-semibold" href="evaluation.html">Tiếp theo: Bài 4 - Đánh giá & So sánh <i class="bi bi-arrow-right ms-1"></i></a>
         </nav>
-    </header>
-
-    <div class="container-fluid px-lg-4 mt-3">
-        <div class="row g-3">
-
-            <aside class="col-12 col-md-4 col-lg-3 col-xl-2">
-                <div class="sidebar-sticky shadow-sm">
-                    <div class="sidebar-title">
-                        <i class="bi bi-journal-code me-1"></i> Danh mục bài học
-                    </div>
-                    <div class="list-group list-group-tvu list-group-flush">
-                        <a href="../../index.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> Tổng quan
-                        </a>
-                        <a href="grid.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 1. Hệ thống Grid
-                        </a>
-                        <a href="components.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 2. Các Components
-                        </a>
-                        <a href="utilities.html" class="list-group-item list-group-item-action active">
-                            <i class="bi bi-chevron-right me-1 small"></i> 3. Utility Classes
-                        </a>
-                        <a href="evaluation.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 4. Đánh giá Ưu điểm
-                        </a>
-                        <a href="feedback.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 5. Thực hành Form
-                        </a>
-                    </div>
-                </div>
-            </aside>
-
-            <main class="col-12 col-md-8 col-lg-9 col-xl-10">
-
-                <h1 class="h3 fw-bold text-primary mb-4"><i class="bi bi-sliders me-2"></i>Utility Classes (Lớp tiện ích)</h1>
-
-                <!-- LÝ THUYẾT -->
-                <section class="mb-5">
-                    <span class="section-tag section-tag--theory">Lý thuyết</span>
-                    <h3 class="section-heading mb-3">1.1. Utility Class là gì?</h3>
-                    <div class="content-card p-4 shadow-sm mb-3">
-                        <p>Utility Class là các lớp CSS <strong>đơn năng, kích thước nhỏ</strong> (mỗi class chỉ làm đúng một việc: canh lề, đổi màu, ẩn/hiện...), giúp lập trình viên tùy biến giao diện trực tiếp trên thẻ HTML mà <strong>không cần viết file CSS riêng</strong>.</p>
-                        <p class="mb-0">Đây chính là điểm khác biệt lớn của Bootstrap so với việc viết CSS thuần: thay vì đặt tên class rồi viết rule CSS, ta ghép nhiều utility class có sẵn lại với nhau.</p>
-                    </div>
-
-                    <h3 class="section-heading mb-3">1.2. Bảng khoảng cách (Spacing)</h3>
-                    <div class="content-card p-4 shadow-sm mb-3">
-                        <p>Cú pháp chung: <code>{thuộc tính}{hướng}-{kích thước}</code>, ví dụ <code>mt-3</code> = margin-top mức 3.</p>
-                        <div class="table-responsive">
-                            <table class="table table-bordered breakpoint-table text-center mb-0">
-                                <thead><tr><th>Ký hiệu</th><th>Ý nghĩa</th><th>Kích thước (0-5)</th></tr></thead>
-                                <tbody>
-                                    <tr><td><code>m</code> / <code>p</code></td><td>margin / padding</td><td rowspan="5" class="align-middle">0 = 0rem<br>1 = 0.25rem<br>2 = 0.5rem<br>3 = 1rem<br>4 = 1.5rem<br>5 = 3rem</td></tr>
-                                    <tr><td><code>t / b / s / e</code></td><td>top / bottom / start / end</td></tr>
-                                    <tr><td><code>x / y</code></td><td>trục ngang / trục dọc</td></tr>
-                                    <tr><td>(không hướng)</td><td>áp dụng cả 4 phía</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">1.3. Nhóm utility phổ biến khác</h3>
-                    <div class="content-card p-4 shadow-sm">
-                        <ul class="mb-0">
-                            <li><strong>Màu sắc:</strong> <code>text-primary</code>, <code>bg-success</code>, <code>border-danger</code>.</li>
-                            <li><strong>Hiển thị (Display):</strong> <code>d-none</code>, <code>d-md-block</code> — ẩn/hiện theo breakpoint.</li>
-                            <li><strong>Flexbox:</strong> <code>d-flex</code>, <code>justify-content-*</code>, <code>align-items-*</code>.</li>
-                            <li><strong>Văn bản:</strong> <code>text-center</code>, <code>fw-bold</code>, <code>fst-italic</code>, <code>text-truncate</code>.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- THỰC HÀNH -->
-                <section class="mb-4">
-                    <span class="section-tag section-tag--practice">Thực hành</span>
-
-                    <h3 class="section-heading mb-3">2.1. Spacing trực quan</h3>
-                    <div class="content-card p-4 shadow-sm mb-4">
-                        <div class="bg-light border p-2">
-                            <div class="bg-primary text-white text-center p-2 m-1">m-1 p-2</div>
-                            <div class="bg-primary text-white text-center p-2 m-3">m-3 p-2</div>
-                            <div class="bg-primary text-white text-center p-2 m-5">m-5 p-2</div>
-                        </div>
-                        <div class="code-box mt-3">&lt;div class="m-1 p-2"&gt;...&lt;/div&gt;<br>&lt;div class="m-3 p-2"&gt;...&lt;/div&gt;<br>&lt;div class="m-5 p-2"&gt;...&lt;/div&gt;</div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">2.2. Bảng màu (Color Utilities)</h3>
-                    <div class="content-card p-4 shadow-sm mb-4">
-                        <div class="row g-2 text-center">
-                            <div class="col-4 col-md-2"><div class="swatch-box bg-primary">bg-primary</div></div>
-                            <div class="col-4 col-md-2"><div class="swatch-box bg-success">bg-success</div></div>
-                            <div class="col-4 col-md-2"><div class="swatch-box bg-danger">bg-danger</div></div>
-                            <div class="col-4 col-md-2"><div class="swatch-box bg-warning text-dark">bg-warning</div></div>
-                            <div class="col-4 col-md-2"><div class="swatch-box bg-info text-dark">bg-info</div></div>
-                            <div class="col-4 col-md-2"><div class="swatch-box bg-dark">bg-dark</div></div>
-                        </div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">2.3. Flexbox: Sắp xếp linh hoạt</h3>
-                    <div class="content-card p-4 shadow-sm mb-4">
-                        <p>Ba khối dưới đây dùng <code>d-flex justify-content-between</code> để tự căn đều khoảng cách:</p>
-                        <div class="d-flex justify-content-between bg-light border p-3 mb-2">
-                            <span class="badge bg-primary p-2">Mục 1</span>
-                            <span class="badge bg-primary p-2">Mục 2</span>
-                            <span class="badge bg-primary p-2">Mục 3</span>
-                        </div>
-                        <div class="code-box">&lt;div class="d-flex justify-content-between"&gt;...&lt;/div&gt;</div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">2.4. Hiển thị theo breakpoint (Responsive Display)</h3>
-                    <div class="content-card p-4 shadow-sm">
-                        <p class="d-block d-md-none alert alert-warning mb-0">Bạn đang xem trên màn hình <strong>nhỏ hơn md</strong> — dòng này chỉ hiện khi màn hình &lt; 768px (<code>d-block d-md-none</code>).</p>
-                        <p class="d-none d-md-block alert alert-primary mb-0">Bạn đang xem trên màn hình <strong>từ md trở lên</strong> — dòng này chỉ hiện khi màn hình ≥ 768px (<code>d-none d-md-block</code>). Hãy thử thu nhỏ trình duyệt để thấy dòng còn lại xuất hiện.</p>
-                    </div>
-                </section>
-
-                <div class="d-flex justify-content-between mt-4">
-                    <a href="components.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Components</a>
-                    <a href="evaluation.html" class="btn btn-primary" style="background-color: var(--tvu-primary); border:none;">Tiếp: Đánh giá <i class="bi bi-arrow-right ms-1"></i></a>
-                </div>
-
-            </main>
-        </div>
+      </main>
     </div>
+  </div>
 
-    <footer class="footer-tvu py-4 text-center">
-        <div class="container">
-            <p class="fw-bold mb-1">TRƯỜNG ĐẠI HỌC TRÀ VINH - KHOA CÔNG NGHỆ THÔNG TIN</p>
-            <p class="small mb-1 opacity-75">Báo cáo Đề tài Cơ sở ngành: Tìm hiểu và ứng dụng Bootstrap trong thiết kế giao diện Web Responsive</p>
-            <p class="small text-warning mb-0">Thiết kế hoàn thiện bằng HTML5, CSS3 & Bootstrap 5</p>
-        </div>
-    </footer>
+  <footer class="footer-tvu py-4 text-center">
+    <div class="container">
+      <p class="fw-bold mb-1">TRƯỜNG ĐẠI HỌC TRÀ VINH - KHOA CÔNG NGHỆ THÔNG TIN</p>
+      <p class="small mb-1 opacity-75">Đồ án Cơ sở ngành: Tìm hiểu và ứng dụng Bootstrap trong thiết kế giao diện Web Responsive</p>
+      <p class="small mb-0 text-warning">Sinh viên thực hiện: Nguyễn Quốc Nam - MSSV: 110124128 - GVHD: TS. Đoàn Phước Miền</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      const htmlEl = document.documentElement;
+      const toggleBtn = document.getElementById("themeToggleBtn");
+      const themeIcon = document.getElementById("themeIcon");
+      const themeText = document.getElementById("themeText");
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      function applyTheme(theme) {
+        htmlEl.setAttribute("data-bs-theme", theme);
+        localStorage.setItem("tvu_bs_theme", theme);
+        if (themeIcon && themeText) {
+          themeIcon.className = theme === "dark" ? "bi bi-sun-fill text-warning" : "bi bi-moon-stars-fill";
+          themeText.textContent = theme === "dark" ? "Sáng" : "Tối";
+        }
+      }
+
+      applyTheme(localStorage.getItem("tvu_bs_theme") || "light");
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", function () {
+          const next = htmlEl.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+          applyTheme(next);
+        });
+      }
+    })();
+  </script>
+  <script>
+    ["utilPad", "utilBg", "utilRound"].forEach(function (id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener("change", function () {
+          const cls = [
+            document.getElementById("utilPad").value,
+            document.getElementById("utilBg").value,
+            document.getElementById("utilRound").value,
+            "text-center fw-bold mb-3"
+          ].join(" ");
+          document.getElementById("utilTarget").className = cls;
+          document.getElementById("utilCode").textContent = 'class="' + cls + '"';
+        });
+      }
+    });
+  </script>
 </body>
 </html>

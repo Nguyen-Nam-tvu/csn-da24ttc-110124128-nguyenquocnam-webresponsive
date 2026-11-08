@@ -1,209 +1,269 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-bs-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hệ thống Grid - Học Bootstrap 5 - TVU</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hệ thống Lưới 12 Cột - Học Bootstrap 5.3 - TVU</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../CSS/style.css" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-tvu sticky-top shadow-sm py-2">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="../../index.html">
+          <i class="bi bi-mortarboard-fill text-warning me-2 fs-5"></i>
+          <span>TVU - CƠ SỞ NGÀNH CNTT</span>
+        </a>
+        <div class="d-flex align-items-center order-lg-3 ms-auto ms-lg-3">
+          <button class="btn btn-outline-light btn-sm me-2" id="themeToggleBtn" type="button">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            <span class="ms-1" id="themeText">Tối</span>
+          </button>
+          <a class="btn btn-warning btn-sm fw-semibold me-2 me-lg-0" href="feedback.html">
+            Góp ý
+          </a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#tvuNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="tvuNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Trang chủ</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="grid.html">Hệ thống Lưới</a></li>
+            <li class="nav-item"><a class="nav-link" href="components.html">Thành phần UI</a></li>
+            <li class="nav-item"><a class="nav-link" href="utilities.html">Lớp Tiện ích</a></li>
+            <li class="nav-item"><a class="nav-link" href="evaluation.html">Đánh giá & So sánh</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-tvu sticky-top shadow-sm py-2">
-            <div class="container-fluid px-lg-4">
-                <a class="navbar-brand fw-bold d-flex align-items-center" href="../../index.html">
-                    <i class="bi bi-mortarboard-fill text-warning me-2 fs-4"></i>
-                    <span>TVU - CƠ SỞ NGÀNH CNTT</span>
-                </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#tvuNavbarContent" aria-controls="tvuNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="tvuNavbarContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../../index.html">Trang chủ</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="grid.html">Hệ thống Lưới</a></li>
-                        <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
-                        <li class="nav-item"><a class="nav-link" href="utilities.html">Utilities</a></li>
-                        <li class="nav-item"><a class="nav-link" href="evaluation.html">Đánh giá</a></li>
-                    </ul>
-                    <a href="feedback.html" class="btn btn-warning btn-sm ms-lg-3 fw-semibold">
-                        <i class="bi bi-pencil-square me-1"></i> Đóng góp ý kiến
-                    </a>
-                </div>
+  <div class="container my-4">
+    <div class="row g-4">
+        <aside class="col-12 col-lg-3">
+          <div class="d-lg-none mb-2">
+            <button class="btn btn-outline-primary w-100 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+              Danh mục bài học
+            </button>
+          </div>
+          <div class="collapse d-lg-block" id="sidebarMenu">
+            <div class="sidebar-sticky shadow-sm">
+              <div class="sidebar-title">Danh mục bài học</div>
+              <div class="list-group list-group-tvu list-group-flush">
+              <a class="list-group-item list-group-item-action" href="../../index.html">Tổng quan & Lịch sử</a>
+              <a class="list-group-item list-group-item-action active" href="grid.html">1. Hệ thống Lưới</a>
+              <a class="list-group-item list-group-item-action" href="components.html">2. Thành phần UI</a>
+              <a class="list-group-item list-group-item-action" href="utilities.html">3. Lớp Tiện ích</a>
+              <a class="list-group-item list-group-item-action" href="evaluation.html">4. Đánh giá & So sánh</a>
+              <a class="list-group-item list-group-item-action" href="feedback.html">5. Thực hành Form</a>
+              </div>
+              <div class="mt-3 pt-3 border-top small text-muted">
+                <div class="fw-semibold text-primary mb-1">Thông tin Đồ án</div>
+                <div>SV: Nguyễn Quốc Nam</div>
+                <div>MSSV: 110124128</div>
+                <div>Lớp: DA24TTC</div>
+                <div>GVHD: TS. Đoàn Phước Miền</div>
+              </div>
             </div>
+          </div>
+        </aside>
+
+      <main class="col-12 col-lg-9">
+        <div class="d-flex flex-wrap justify-content-between align-items-center bg-primary text-white rounded-3 p-3 mb-4 shadow-sm">
+          <div>
+            <div class="small opacity-75">Bộ đo Viewport trực tiếp</div>
+            <div class="fw-bold">Chiều rộng: <span id="vpWidth">1280</span>px — Thiết bị: <span class="badge bg-warning text-dark" id="vpDevice">Máy tính Desktop</span></div>
+          </div>
+          <div class="d-flex gap-1 mt-2 mt-md-0">
+            <span class="badge bg-light text-dark" id="bp-xs">xs</span>
+            <span class="badge bg-light text-dark" id="bp-sm">sm</span>
+            <span class="badge bg-light text-dark" id="bp-md">md</span>
+            <span class="badge bg-light text-dark" id="bp-lg">lg</span>
+            <span class="badge bg-warning text-dark" id="bp-xl">xl</span>
+            <span class="badge bg-light text-dark" id="bp-xxl">xxl</span>
+          </div>
+        </div>
+
+        <section class="mb-4">
+          <h2 class="section-heading">1. Kiến trúc 3 tầng của Grid System</h2>
+          <div class="content-card shadow-sm">
+            <p class="mb-3">Hệ thống lưới của Bootstrap 5.3 được xây dựng trên nền tảng CSS Flexbox, chia vùng hiển thị thành 12 cột ảo bằng nhau thông qua 3 lớp lồng nhau:</p>
+            <div class="row g-3">
+              <div class="col-12 col-md-4">
+                <div class="p-3 bg-light rounded border h-100">
+                  <h6 class="fw-bold text-primary">1. Container</h6>
+                  <p class="small mb-0">Khung bọc ngoài cùng giúp căn giữa trang và tạo khoảng đệm ngang bằng <code>.container</code> hoặc <code>.container-fluid</code>.</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="p-3 bg-light rounded border h-100">
+                  <h6 class="fw-bold text-success">2. Row</h6>
+                  <p class="small mb-0">Khối hàng ngang <code>.row</code> đóng vai trò là Flex Container và kiểm soát khoảng cách rãnh qua lớp <code>.g-*</code>.</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="p-3 bg-light rounded border h-100">
+                  <h6 class="fw-bold text-dark">3. Column</h6>
+                  <p class="small mb-0">Các cột <code>.col-*</code> nằm trực tiếp trong <code>.row</code>. Khi tổng số phần vượt quá 12, cột dư tự động xuống dòng.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-4">
+          <h2 class="section-heading">2. Bảng 6 mức Breakpoints trong Bootstrap 5.3</h2>
+          <div class="content-card shadow-sm">
+            <div class="table-responsive">
+              <table class="table table-bordered breakpoint-table align-middle text-center mb-0">
+                <thead>
+                  <tr>
+                    <th>Tên mức</th>
+                    <th>Tiền tố lớp</th>
+                    <th>Kích thước màn hình</th>
+                    <th>Chiều rộng .container</th>
+                    <th>Nhóm thiết bị</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Extra small</td>
+                    <td><code>.col-*</code></td>
+                    <td>&lt; 576px</td>
+                    <td>100%</td>
+                    <td>Điện thoại dọc</td>
+                  </tr>
+                  <tr>
+                    <td>Small</td>
+                    <td><code>.col-sm-*</code></td>
+                    <td>&ge; 576px</td>
+                    <td>540px</td>
+                    <td>Điện thoại ngang</td>
+                  </tr>
+                  <tr>
+                    <td>Medium</td>
+                    <td><code>.col-md-*</code></td>
+                    <td>&ge; 768px</td>
+                    <td>720px</td>
+                    <td>Máy tính bảng</td>
+                  </tr>
+                  <tr>
+                    <td>Large</td>
+                    <td><code>.col-lg-*</code></td>
+                    <td>&ge; 992px</td>
+                    <td>960px</td>
+                    <td>Laptop nhỏ</td>
+                  </tr>
+                  <tr>
+                    <td>Extra large</td>
+                    <td><code>.col-xl-*</code></td>
+                    <td>&ge; 1200px</td>
+                    <td>1140px</td>
+                    <td>Máy tính để bàn</td>
+                  </tr>
+                  <tr>
+                    <td>Extra extra large</td>
+                    <td><code>.col-xxl-*</code></td>
+                    <td>&ge; 1400px</td>
+                    <td>1320px</td>
+                    <td>Màn hình lớn Full HD</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="section-heading">3. Minh họa lưới đáp ứng tự động chuyển đổi số cột</h2>
+          <div class="content-card shadow-sm">
+            <p class="small text-muted mb-2">Bố cục 4 thẻ <code>.col-12 .col-md-6 .col-lg-3</code>: hiển thị 4 cột trên Máy tính, 2 cột trên Máy tính bảng và 1 cột trên Điện thoại:</p>
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-6 col-lg-3"><div class="grid-demo-cell">Khối 1: col-lg-3</div></div>
+              <div class="col-12 col-md-6 col-lg-3"><div class="grid-demo-cell">Khối 2: col-lg-3</div></div>
+              <div class="col-12 col-md-6 col-lg-3"><div class="grid-demo-cell">Khối 3: col-lg-3</div></div>
+              <div class="col-12 col-md-6 col-lg-3"><div class="grid-demo-cell">Khối 4: col-lg-3</div></div>
+            </div>
+            <div class="code-box">
+              &lt;div class="row g-3"&gt;<br>
+              &nbsp;&nbsp;&lt;div class="col-12 col-md-6 col-lg-3"&gt;Khối 1&lt;/div&gt;<br>
+              &nbsp;&nbsp;&lt;div class="col-12 col-md-6 col-lg-3"&gt;Khối 2&lt;/div&gt;<br>
+              &lt;/div&gt;
+            </div>
+          </div>
+        </section>
+
+        <nav class="page-nav-bottom shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-2" aria-label="Điều hướng chuyển trang">
+          <a class="btn btn-outline-primary fw-semibold" href="../../index.html"><i class="bi bi-arrow-left me-1"></i> Trước: Trang chủ</a>
+          <a class="btn btn-light border btn-sm text-secondary" href="#">Lên đầu trang</a>
+          <a class="btn btn-primary fw-semibold" href="components.html">Tiếp theo: Bài 2 - Thành phần UI <i class="bi bi-arrow-right ms-1"></i></a>
         </nav>
-    </header>
-
-    <div class="container-fluid px-lg-4 mt-3">
-        <div class="row g-3">
-
-            <aside class="col-12 col-md-4 col-lg-3 col-xl-2">
-                <div class="sidebar-sticky shadow-sm">
-                    <div class="sidebar-title">
-                        <i class="bi bi-journal-code me-1"></i> Danh mục bài học
-                    </div>
-                    <div class="list-group list-group-tvu list-group-flush">
-                        <a href="../../index.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> Tổng quan
-                        </a>
-                        <a href="grid.html" class="list-group-item list-group-item-action active">
-                            <i class="bi bi-chevron-right me-1 small"></i> 1. Hệ thống Grid
-                        </a>
-                        <a href="components.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 2. Các Components
-                        </a>
-                        <a href="utilities.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 3. Utility Classes
-                        </a>
-                        <a href="evaluation.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 4. Đánh giá Ưu điểm
-                        </a>
-                        <a href="feedback.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 5. Thực hành Form
-                        </a>
-                    </div>
-                </div>
-            </aside>
-
-            <main class="col-12 col-md-8 col-lg-9 col-xl-10">
-
-                <h1 class="h3 fw-bold text-primary mb-4"><i class="bi bi-grid-3x3-gap-fill me-2"></i>Hệ thống Lưới (Grid System)</h1>
-
-                <!-- LÝ THUYẾT -->
-                <section class="mb-5">
-                    <span class="section-tag section-tag--theory">Lý thuyết</span>
-                    <h3 class="section-heading mb-3">1.1. Khái niệm cơ bản</h3>
-                    <div class="content-card p-4 shadow-sm mb-3">
-                        <p>Grid System của Bootstrap được xây dựng trên nền <strong>Flexbox</strong>, chia chiều ngang màn hình thành <strong>12 cột bằng nhau</strong>. Hệ thống gồm 3 thành phần lồng nhau:</p>
-                        <ul>
-                            <li><code>.container</code> / <code>.container-fluid</code>: khung chứa ngoài cùng, canh giữa nội dung và tạo lề hai bên.</li>
-                            <li><code>.row</code>: một hàng ngang, dùng để nhóm các cột lại với nhau.</li>
-                            <li><code>.col-*</code>: các cột nằm bên trong <code>.row</code>, chiếm số phần trong tổng 12 cột.</li>
-                        </ul>
-                        <p class="mb-0">Container có 2 dạng chính: <code>.container</code> có chiều rộng tối đa cố định theo từng breakpoint (không co giãn 100%), còn <code>.container-fluid</code> luôn chiếm 100% chiều rộng màn hình ở mọi kích thước.</p>
-                    </div>
-
-                    <h3 class="section-heading mb-3">1.2. Breakpoints (Điểm ngắt)</h3>
-                    <div class="content-card p-4 shadow-sm mb-3">
-                        <p>Breakpoint là các mốc chiều rộng màn hình mà tại đó bố cục sẽ thay đổi. Đây là yếu tố cốt lõi tạo nên tính <strong>Responsive</strong> của Bootstrap:</p>
-                        <div class="table-responsive">
-                            <table class="table table-bordered breakpoint-table align-middle text-center mb-0">
-                                <thead>
-                                    <tr>
-                                        <th>Tiền tố Class</th>
-                                        <th>Thiết bị điển hình</th>
-                                        <th>Chiều rộng tối thiểu</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>(không có tiền tố)</td><td>Điện thoại (dọc)</td><td>&lt; 576px</td></tr>
-                                    <tr><td><code>sm</code></td><td>Điện thoại (ngang)</td><td>≥ 576px</td></tr>
-                                    <tr><td><code>md</code></td><td>Máy tính bảng</td><td>≥ 768px</td></tr>
-                                    <tr><td><code>lg</code></td><td>Laptop</td><td>≥ 992px</td></tr>
-                                    <tr><td><code>xl</code></td><td>Desktop</td><td>≥ 1200px</td></tr>
-                                    <tr><td><code>xxl</code></td><td>Màn hình lớn</td><td>≥ 1400px</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">1.3. Các class hỗ trợ khác</h3>
-                    <div class="content-card p-4 shadow-sm">
-                        <ul class="mb-0">
-                            <li><strong>Gutter (khoảng cách cột):</strong> <code>g-1</code> đến <code>g-5</code>, hoặc riêng ngang/dọc <code>gx-*</code>, <code>gy-*</code>.</li>
-                            <li><strong>Offset (đẩy lệch cột):</strong> <code>offset-lg-2</code> đẩy cột sang phải 2/12 phần trên màn hình lớn.</li>
-                            <li><strong>Order (thay đổi thứ tự):</strong> <code>order-1</code>, <code>order-2</code>... sắp xếp lại cột không cần đổi HTML.</li>
-                            <li><strong>Grid lồng nhau (nested grid):</strong> có thể đặt một <code>.row</code> mới bên trong một <code>.col</code>.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- THỰC HÀNH -->
-                <section class="mb-4">
-                    <span class="section-tag section-tag--practice">Thực hành</span>
-                    <h3 class="section-heading mb-3">2.1. Ví dụ: Cột chia đều &amp; tự động xuống dòng</h3>
-                    <div class="content-card p-4 shadow-sm mb-4">
-                        <p>Quan sát 3 khối dưới đây tự động chuyển đổi bố cục khi thay đổi kích thước màn hình (thử thu nhỏ trình duyệt):</p>
-                        <div class="row g-2 text-center text-white fw-bold mb-3">
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <div class="p-3 rounded bg-primary shadow-sm">Desktop: 4/12<br>Tablet: 6/12<br>Mobile: 12/12</div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <div class="p-3 rounded bg-secondary shadow-sm">Desktop: 4/12<br>Tablet: 6/12<br>Mobile: 12/12</div>
-                            </div>
-                            <div class="col-12 col-md-12 col-lg-4">
-                                <div class="p-3 rounded bg-success shadow-sm">Desktop: 4/12<br>Tablet: 12/12<br>Mobile: 12/12</div>
-                            </div>
-                        </div>
-                        <div class="code-box">
-                            &lt;div class="row"&gt;<br>
-                            &nbsp;&nbsp;&lt;div class="col-12 col-md-6 col-lg-4"&gt;Khối 1&lt;/div&gt;<br>
-                            &nbsp;&nbsp;&lt;div class="col-12 col-md-6 col-lg-4"&gt;Khối 2&lt;/div&gt;<br>
-                            &nbsp;&nbsp;&lt;div class="col-12 col-md-12 col-lg-4"&gt;Khối 3&lt;/div&gt;<br>
-                            &lt;/div&gt;
-                        </div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">2.2. Ví dụ: Offset (đẩy lệch cột)</h3>
-                    <div class="content-card p-4 shadow-sm mb-4">
-                        <p>Cột dưới đây rộng 6/12 nhưng được đẩy lệch sang phải 3/12 để canh giữa mà không cần dùng <code>text-center</code>:</p>
-                        <div class="row mb-3">
-                            <div class="col-12 col-md-6 offset-md-3">
-                                <div class="p-3 rounded bg-warning text-dark text-center fw-bold">col-md-6 offset-md-3</div>
-                            </div>
-                        </div>
-                        <div class="code-box">
-                            &lt;div class="col-md-6 offset-md-3"&gt;Nội dung&lt;/div&gt;
-                        </div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">2.3. Ví dụ: Grid lồng nhau (Nested Grid)</h3>
-                    <div class="content-card p-4 shadow-sm">
-                        <p>Một <code>.row</code> mới được đặt bên trong cột bên trái để chia nhỏ tiếp thành 2 phần:</p>
-                        <div class="row mb-3">
-                            <div class="col-md-8">
-                                <div class="p-2 bg-light border rounded">
-                                    <p class="small text-muted mb-2">Cột cha (col-md-8) chứa grid con:</p>
-                                    <div class="row g-2">
-                                        <div class="col-6"><div class="p-2 bg-primary text-white rounded text-center small">Con 1/2</div></div>
-                                        <div class="col-6"><div class="p-2 bg-primary text-white rounded text-center small">Con 2/2</div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="p-2 bg-secondary text-white rounded text-center h-100 d-flex align-items-center justify-content-center small">Cột col-md-4</div>
-                            </div>
-                        </div>
-                        <div class="code-box">
-                            &lt;div class="col-md-8"&gt;<br>
-                            &nbsp;&nbsp;&lt;div class="row g-2"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-6"&gt;Con 1/2&lt;/div&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-6"&gt;Con 2/2&lt;/div&gt;<br>
-                            &nbsp;&nbsp;&lt;/div&gt;<br>
-                            &lt;/div&gt;
-                        </div>
-                    </div>
-                </section>
-
-                <div class="d-flex justify-content-between mt-4">
-                    <a href="../../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Trang chủ</a>
-                    <a href="components.html" class="btn btn-primary" style="background-color: var(--tvu-primary); border:none;">Tiếp: Components <i class="bi bi-arrow-right ms-1"></i></a>
-                </div>
-
-            </main>
-        </div>
+      </main>
     </div>
+  </div>
 
-    <footer class="footer-tvu py-4 text-center">
-        <div class="container">
-            <p class="fw-bold mb-1">TRƯỜNG ĐẠI HỌC TRÀ VINH - KHOA CÔNG NGHỆ THÔNG TIN</p>
-            <p class="small mb-1 opacity-75">Báo cáo Đề tài Cơ sở ngành: Tìm hiểu và ứng dụng Bootstrap trong thiết kế giao diện Web Responsive</p>
-            <p class="small text-warning mb-0">Thiết kế hoàn thiện bằng HTML5, CSS3 & Bootstrap 5</p>
-        </div>
-    </footer>
+  <footer class="footer-tvu py-4 text-center">
+    <div class="container">
+      <p class="fw-bold mb-1">TRƯỜNG ĐẠI HỌC TRÀ VINH - KHOA CÔNG NGHỆ THÔNG TIN</p>
+      <p class="small mb-1 opacity-75">Đồ án Cơ sở ngành: Tìm hiểu và ứng dụng Bootstrap trong thiết kế giao diện Web Responsive</p>
+      <p class="small mb-0 text-warning">Sinh viên thực hiện: Nguyễn Quốc Nam - MSSV: 110124128 - GVHD: TS. Đoàn Phước Miền</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      const htmlEl = document.documentElement;
+      const toggleBtn = document.getElementById("themeToggleBtn");
+      const themeIcon = document.getElementById("themeIcon");
+      const themeText = document.getElementById("themeText");
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      function applyTheme(theme) {
+        htmlEl.setAttribute("data-bs-theme", theme);
+        localStorage.setItem("tvu_bs_theme", theme);
+        if (themeIcon && themeText) {
+          themeIcon.className = theme === "dark" ? "bi bi-sun-fill text-warning" : "bi bi-moon-stars-fill";
+          themeText.textContent = theme === "dark" ? "Sáng" : "Tối";
+        }
+      }
+
+      applyTheme(localStorage.getItem("tvu_bs_theme") || "light");
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", function () {
+          const next = htmlEl.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+          applyTheme(next);
+        });
+      }
+    })();
+  </script>
+  <script>
+    function updateViewportInspector() {
+      const w = window.innerWidth;
+      const vpW = document.getElementById("vpWidth");
+      const vpD = document.getElementById("vpDevice");
+      if (vpW) vpW.textContent = w;
+
+      let active = "xs";
+      let device = "Điện thoại Mobile";
+      if (w >= 1400) { active = "xxl"; device = "Màn hình rộng Desktop"; }
+      else if (w >= 1200) { active = "xl"; device = "Máy tính Desktop"; }
+      else if (w >= 992) { active = "lg"; device = "Laptop / Tablet ngang"; }
+      else if (w >= 768) { active = "md"; device = "Máy tính bảng Tablet"; }
+      else if (w >= 576) { active = "sm"; device = "Điện thoại ngang"; }
+
+      if (vpD) vpD.textContent = device;
+      ["xs", "sm", "md", "lg", "xl", "xxl"].forEach(function (bp) {
+        const el = document.getElementById("bp-" + bp);
+        if (el) {
+          el.className = bp === active ? "badge bg-warning text-dark" : "badge bg-light text-dark";
+        }
+      });
+    }
+    window.addEventListener("resize", updateViewportInspector);
+    updateViewportInspector();
+  </script>
 </body>
 </html>

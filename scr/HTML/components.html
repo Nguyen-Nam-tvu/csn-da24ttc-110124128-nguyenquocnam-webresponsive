@@ -1,243 +1,236 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-bs-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Components - Học Bootstrap 5 - TVU</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thành phần Giao diện - Học Bootstrap 5.3 - TVU</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../CSS/style.css" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-tvu sticky-top shadow-sm py-2">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="../../index.html">
+          <i class="bi bi-mortarboard-fill text-warning me-2 fs-5"></i>
+          <span>TVU - CƠ SỞ NGÀNH CNTT</span>
+        </a>
+        <div class="d-flex align-items-center order-lg-3 ms-auto ms-lg-3">
+          <button class="btn btn-outline-light btn-sm me-2" id="themeToggleBtn" type="button">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            <span class="ms-1" id="themeText">Tối</span>
+          </button>
+          <a class="btn btn-warning btn-sm fw-semibold me-2 me-lg-0" href="feedback.html">
+            Góp ý
+          </a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#tvuNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="tvuNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Trang chủ</a></li>
+            <li class="nav-item"><a class="nav-link" href="grid.html">Hệ thống Lưới</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="components.html">Thành phần UI</a></li>
+            <li class="nav-item"><a class="nav-link" href="utilities.html">Lớp Tiện ích</a></li>
+            <li class="nav-item"><a class="nav-link" href="evaluation.html">Đánh giá & So sánh</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-tvu sticky-top shadow-sm py-2">
-            <div class="container-fluid px-lg-4">
-                <a class="navbar-brand fw-bold d-flex align-items-center" href="../../index.html">
-                    <i class="bi bi-mortarboard-fill text-warning me-2 fs-4"></i>
-                    <span>TVU - CƠ SỞ NGÀNH CNTT</span>
-                </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#tvuNavbarContent" aria-controls="tvuNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="tvuNavbarContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../../index.html">Trang chủ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="grid.html">Hệ thống Lưới</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="components.html">Components</a></li>
-                        <li class="nav-item"><a class="nav-link" href="utilities.html">Utilities</a></li>
-                        <li class="nav-item"><a class="nav-link" href="evaluation.html">Đánh giá</a></li>
-                    </ul>
-                    <a href="feedback.html" class="btn btn-warning btn-sm ms-lg-3 fw-semibold">
-                        <i class="bi bi-pencil-square me-1"></i> Đóng góp ý kiến
-                    </a>
-                </div>
+  <div class="container my-4">
+    <div class="row g-4">
+        <aside class="col-12 col-lg-3">
+          <div class="d-lg-none mb-2">
+            <button class="btn btn-outline-primary w-100 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+              Danh mục bài học
+            </button>
+          </div>
+          <div class="collapse d-lg-block" id="sidebarMenu">
+            <div class="sidebar-sticky shadow-sm">
+              <div class="sidebar-title">Danh mục bài học</div>
+              <div class="list-group list-group-tvu list-group-flush">
+              <a class="list-group-item list-group-item-action" href="../../index.html">Tổng quan & Lịch sử</a>
+              <a class="list-group-item list-group-item-action" href="grid.html">1. Hệ thống Lưới</a>
+              <a class="list-group-item list-group-item-action active" href="components.html">2. Thành phần UI</a>
+              <a class="list-group-item list-group-item-action" href="utilities.html">3. Lớp Tiện ích</a>
+              <a class="list-group-item list-group-item-action" href="evaluation.html">4. Đánh giá & So sánh</a>
+              <a class="list-group-item list-group-item-action" href="feedback.html">5. Thực hành Form</a>
+              </div>
+              <div class="mt-3 pt-3 border-top small text-muted">
+                <div class="fw-semibold text-primary mb-1">Thông tin Đồ án</div>
+                <div>SV: Nguyễn Quốc Nam</div>
+                <div>MSSV: 110124128</div>
+                <div>Lớp: DA24TTC</div>
+                <div>GVHD: TS. Đoàn Phước Miền</div>
+              </div>
             </div>
+          </div>
+        </aside>
+
+      <main class="col-12 col-lg-9">
+        <section class="mb-4">
+          <h2 class="section-heading">1. Cơ chế kích hoạt Component qua thuộc tính data-bs-*</h2>
+          <div class="content-card shadow-sm">
+            <p class="mb-3">
+              Các thành phần giao diện của Bootstrap 5.3 kết hợp định kiểu CSS với kịch bản JavaScript ES6 thuần. Lập trình viên kích hoạt hiệu ứng trực tiếp bằng thuộc tính HTML5 <code>data-bs-toggle</code> và <code>data-bs-target</code> mà không cần viết hàm JavaScript thủ công.
+            </p>
+            <div class="row g-3 text-center">
+              <div class="col-12 col-md-3">
+                <div class="p-3 bg-light rounded border h-100">
+                  <div class="fw-bold text-primary mb-1">1. Điều hướng</div>
+                  <div class="small text-muted">Navbar, Offcanvas, Tabs, Breadcrumb</div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="p-3 bg-light rounded border h-100">
+                  <div class="fw-bold text-primary mb-1">2. Nội dung</div>
+                  <div class="small text-muted">Card, Accordion, Carousel, List Group</div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="p-3 bg-light rounded border h-100">
+                  <div class="fw-bold text-primary mb-1">3. Phản hồi</div>
+                  <div class="small text-muted">Alert, Modal, Toast, Progress, Badge</div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="p-3 bg-light rounded border h-100">
+                  <div class="fw-bold text-primary mb-1">4. Biểu mẫu</div>
+                  <div class="small text-muted">Buttons, Input Group, Floating Labels</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-4">
+          <h2 class="section-heading">2. Thành phần Card và Accordion thu gọn</h2>
+          <div class="row g-3">
+            <div class="col-12 col-md-5">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-primary text-white fw-semibold">Thẻ thông tin .card</div>
+                <div class="card-body">
+                  <h6 class="card-title fw-bold">Khoa Công nghệ Thông tin</h6>
+                  <p class="card-text small text-muted">Khối giao diện linh hoạt dùng để trình bày bài viết, sản phẩm hoặc hồ sơ sinh viên.</p>
+                  <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal" type="button">Mở hộp thoại Modal</button>
+                  <button class="btn btn-sm btn-outline-secondary ms-1" data-bs-toggle="offcanvas" data-bs-target="#demoOffcanvas" type="button">Mở Offcanvas</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-7">
+              <div class="accordion shadow-sm" id="faqAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#accOne">
+                      Vì sao Bootstrap 5 sử dụng tiền tố data-bs-*?
+                    </button>
+                  </h2>
+                  <div id="accOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">
+                      Tiền tố <code>bs</code> tạo không gian tên riêng biệt giúp tránh xung đột thuộc tính khi tích hợp Bootstrap chung với các thư viện JavaScript khác.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#accTwo">
+                      Sự khác biệt giữa Modal và Offcanvas là gì?
+                    </button>
+                  </h2>
+                  <div id="accTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">
+                      Modal hiển thị hộp thoại ở chính giữa màn hình cho các xác nhận quan trọng, còn Offcanvas trượt từ cạnh màn hình để làm thanh thực đơn di động.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="section-heading">3. Thông báo Alert và Thanh tiến trình Progress</h2>
+          <div class="content-card shadow-sm">
+            <div class="alert alert-success py-2 small mb-3">
+              <strong>Thành công:</strong> Các thành phần giao diện đã sẵn sàng hoạt động trên mọi kích thước màn hình.
+            </div>
+            <div class="small fw-semibold mb-1">Mức độ hoàn thành nội dung học tập: 85%</div>
+            <div class="progress" style="height: 18px;">
+              <div class="progress-bar bg-primary" style="width: 85%;">85%</div>
+            </div>
+          </div>
+        </section>
+
+        <nav class="page-nav-bottom shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-2" aria-label="Điều hướng chuyển trang">
+          <a class="btn btn-outline-primary fw-semibold" href="grid.html"><i class="bi bi-arrow-left me-1"></i> Trước: Bài 1 - Hệ thống Lưới</a>
+          <a class="btn btn-light border btn-sm text-secondary" href="#">Lên đầu trang</a>
+          <a class="btn btn-primary fw-semibold" href="utilities.html">Tiếp theo: Bài 3 - Lớp Tiện ích <i class="bi bi-arrow-right ms-1"></i></a>
         </nav>
-    </header>
-
-    <div class="container-fluid px-lg-4 mt-3">
-        <div class="row g-3">
-
-            <aside class="col-12 col-md-4 col-lg-3 col-xl-2">
-                <div class="sidebar-sticky shadow-sm">
-                    <div class="sidebar-title">
-                        <i class="bi bi-journal-code me-1"></i> Danh mục bài học
-                    </div>
-                    <div class="list-group list-group-tvu list-group-flush">
-                        <a href="../../index.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> Tổng quan
-                        </a>
-                        <a href="grid.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 1. Hệ thống Grid
-                        </a>
-                        <a href="components.html" class="list-group-item list-group-item-action active">
-                            <i class="bi bi-chevron-right me-1 small"></i> 2. Các Components
-                        </a>
-                        <a href="utilities.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 3. Utility Classes
-                        </a>
-                        <a href="evaluation.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 4. Đánh giá Ưu điểm
-                        </a>
-                        <a href="feedback.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 5. Thực hành Form
-                        </a>
-                    </div>
-                </div>
-            </aside>
-
-            <main class="col-12 col-md-8 col-lg-9 col-xl-10">
-
-                <h1 class="h3 fw-bold text-primary mb-4"><i class="bi bi-window-stack me-2"></i>Các thành phần giao diện (Components)</h1>
-
-                <!-- LÝ THUYẾT -->
-                <section class="mb-5">
-                    <span class="section-tag section-tag--theory">Lý thuyết</span>
-                    <h3 class="section-heading mb-3">1.1. Component là gì?</h3>
-                    <div class="content-card p-4 shadow-sm mb-3">
-                        <p>Component là các <strong>khối giao diện dựng sẵn</strong>, đóng gói cả CSS lẫn hành vi JavaScript (thông qua thuộc tính <code>data-bs-*</code>), giúp lập trình viên chỉ cần gắn đúng class HTML mà không cần tự viết logic JS.</p>
-                        <p class="mb-0">Các component trong Bootstrap có thể chia thành 4 nhóm chính:</p>
-                    </div>
-                    <div class="row g-3">
-                        <div class="col-6 col-lg-3">
-                            <div class="content-card h-100 p-3 shadow-sm text-center">
-                                <i class="bi bi-signpost-split fs-3 text-primary"></i>
-                                <h6 class="fw-bold mt-2 mb-1">Điều hướng</h6>
-                                <p class="text-muted small mb-0">Navbar, Breadcrumb, Pagination, Tabs</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="content-card h-100 p-3 shadow-sm text-center">
-                                <i class="bi bi-card-text fs-3 text-success"></i>
-                                <h6 class="fw-bold mt-2 mb-1">Nội dung</h6>
-                                <p class="text-muted small mb-0">Card, List Group, Accordion, Carousel</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="content-card h-100 p-3 shadow-sm text-center">
-                                <i class="bi bi-bell-fill fs-3 text-warning"></i>
-                                <h6 class="fw-bold mt-2 mb-1">Phản hồi</h6>
-                                <p class="text-muted small mb-0">Alert, Modal, Toast, Spinner</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="content-card h-100 p-3 shadow-sm text-center">
-                                <i class="bi bi-ui-checks-grid fs-3 text-danger"></i>
-                                <h6 class="fw-bold mt-2 mb-1">Biểu mẫu</h6>
-                                <p class="text-muted small mb-0">Form Control, Input Group, Validation</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- THỰC HÀNH -->
-                <section class="mb-4">
-                    <span class="section-tag section-tag--practice">Thực hành</span>
-
-                    <h3 class="section-heading mb-3">2.1. Card &amp; Button</h3>
-                    <div class="row g-3 mb-4">
-                        <div class="col-12 col-md-6 col-xl-4">
-                            <div class="content-card h-100 p-3 shadow-sm d-flex flex-column">
-                                <h5 class="fw-bold text-primary"><i class="bi bi-layout-text-window me-2"></i>Thanh điều hướng</h5>
-                                <p class="text-muted small flex-grow-1">Hỗ trợ menu co giãn, nút gập mở (Toggler) chuẩn di động mà không cần tự viết JS.</p>
-                                <span class="badge bg-primary-subtle text-primary border border-primary-subtle align-self-start">Component: Navbar</span>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-4">
-                            <div class="content-card h-100 p-3 shadow-sm d-flex flex-column">
-                                <h5 class="fw-bold text-success"><i class="bi bi-window-stack me-2"></i>Hộp thoại nổi</h5>
-                                <p class="text-muted small flex-grow-1">Hiển thị bảng thông báo, popup xác nhận ngay trên trang mà không bị chuyển hướng.</p>
-                                <span class="badge bg-success-subtle text-success border border-success-subtle align-self-start">Component: Modal</span>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-12 col-xl-4">
-                            <div class="content-card h-100 p-3 shadow-sm d-flex flex-column">
-                                <h5 class="fw-bold text-warning text-dark"><i class="bi bi-ui-checks me-2"></i>Thẻ &amp; Nút tương tác</h5>
-                                <p class="text-muted small flex-grow-1">Card đóng gói dữ liệu trực quan kèm các nút bấm tích hợp sẵn bảng màu hiện đại.</p>
-                                <span class="badge bg-warning-subtle text-dark border border-warning-subtle align-self-start">Component: Cards &amp; Buttons</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-card p-4 shadow-sm mb-4">
-                        <p class="mb-2 fw-semibold">Các biến thể màu của Button (<code>.btn-*</code>):</p>
-                        <button type="button" class="btn btn-primary me-2 mb-2">Primary</button>
-                        <button type="button" class="btn btn-secondary me-2 mb-2">Secondary</button>
-                        <button type="button" class="btn btn-success me-2 mb-2">Success</button>
-                        <button type="button" class="btn btn-danger me-2 mb-2">Danger</button>
-                        <button type="button" class="btn btn-warning me-2 mb-2">Warning</button>
-                        <button type="button" class="btn btn-outline-primary me-2 mb-2">Outline</button>
-                        <div class="code-box mt-2">&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;</div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">2.2. Modal (Hộp thoại)</h3>
-                    <div class="content-card p-4 shadow-sm mb-4">
-                        <p>Nhấn nút bên dưới để xem một Modal thật, chỉ dùng thuộc tính <code>data-bs-toggle</code>, không cần viết JavaScript riêng:</p>
-                        <button type="button" class="btn btn-primary" style="background-color: var(--tvu-primary); border:none;" data-bs-toggle="modal" data-bs-target="#demoModal">
-                            <i class="bi bi-box-arrow-up-right me-1"></i> Mở Modal minh họa
-                        </button>
-                        <div class="code-box mt-3">
-                            &lt;button data-bs-toggle="modal" data-bs-target="#demoModal"&gt;Mở&lt;/button&gt;<br>
-                            &lt;div class="modal" id="demoModal"&gt;...&lt;/div&gt;
-                        </div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">2.3. Accordion (Xếp lớp)</h3>
-                    <div class="content-card p-4 shadow-sm mb-4">
-                        <div class="accordion" id="demoAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                        Grid System hoạt động như thế nào?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#demoAccordion">
-                                    <div class="accordion-body">Chia màn hình thành 12 cột dựa trên Flexbox, tự động responsive theo breakpoint.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                        Có cần viết JavaScript riêng không?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#demoAccordion">
-                                    <div class="accordion-body">Không, chỉ cần nhúng file Bootstrap Bundle JS và dùng đúng các thuộc tính <code>data-bs-*</code>.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3 class="section-heading mb-3">2.4. Alert &amp; Badge</h3>
-                    <div class="content-card p-4 shadow-sm">
-                        <div class="alert alert-primary d-flex align-items-center" role="alert">
-                            <i class="bi bi-info-circle-fill me-2"></i> Đây là một thông báo dạng Alert (Primary).
-                        </div>
-                        <div class="alert alert-warning d-flex align-items-center mb-3" role="alert">
-                            <i class="bi bi-exclamation-triangle-fill me-2"></i> Đây là một cảnh báo dạng Alert (Warning).
-                        </div>
-                        <span class="badge bg-primary me-1">Mới</span>
-                        <span class="badge bg-success me-1">Hoàn thành</span>
-                        <span class="badge bg-danger">Khẩn cấp</span>
-                    </div>
-                </section>
-
-                <div class="d-flex justify-content-between mt-4">
-                    <a href="grid.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Hệ thống Grid</a>
-                    <a href="utilities.html" class="btn btn-primary" style="background-color: var(--tvu-primary); border:none;">Tiếp: Utilities <i class="bi bi-arrow-right ms-1"></i></a>
-                </div>
-
-            </main>
-        </div>
+      </main>
     </div>
+  </div>
 
-    <!-- MODAL DEMO -->
-    <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header" style="background-color: var(--tvu-primary); color: #fff;">
-                    <h5 class="modal-title">Xác nhận thao tác</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Đây là nội dung minh họa cho component <strong>Modal</strong> trong Bootstrap 5 — thường dùng để xác nhận hành động (xóa, lưu, đăng xuất...) mà không cần chuyển trang.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-primary" style="background-color: var(--tvu-primary); border:none;">Đồng ý</button>
-                </div>
-            </div>
+  <div class="modal fade" id="demoModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Hộp thoại Modal Bootstrap 5</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
+        <div class="modal-body small">
+          Hộp thoại này được kích hoạt tự động bằng thuộc tính <code>data-bs-toggle="modal"</code>.
+        </div>
+      </div>
     </div>
+  </div>
 
-    <footer class="footer-tvu py-4 text-center">
-        <div class="container">
-            <p class="fw-bold mb-1">TRƯỜNG ĐẠI HỌC TRÀ VINH - KHOA CÔNG NGHỆ THÔNG TIN</p>
-            <p class="small mb-1 opacity-75">Báo cáo Đề tài Cơ sở ngành: Tìm hiểu và ứng dụng Bootstrap trong thiết kế giao diện Web Responsive</p>
-            <p class="small text-warning mb-0">Thiết kế hoàn thiện bằng HTML5, CSS3 & Bootstrap 5</p>
-        </div>
-    </footer>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="demoOffcanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold">Ngăn kéo trượt Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body small">
+      Thành phần Offcanvas hỗ trợ tạo thực đơn trượt mượt mà trên thiết bị di động.
+    </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="footer-tvu py-4 text-center">
+    <div class="container">
+      <p class="fw-bold mb-1">TRƯỜNG ĐẠI HỌC TRÀ VINH - KHOA CÔNG NGHỆ THÔNG TIN</p>
+      <p class="small mb-1 opacity-75">Đồ án Cơ sở ngành: Tìm hiểu và ứng dụng Bootstrap trong thiết kế giao diện Web Responsive</p>
+      <p class="small mb-0 text-warning">Sinh viên thực hiện: Nguyễn Quốc Nam - MSSV: 110124128 - GVHD: TS. Đoàn Phước Miền</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      const htmlEl = document.documentElement;
+      const toggleBtn = document.getElementById("themeToggleBtn");
+      const themeIcon = document.getElementById("themeIcon");
+      const themeText = document.getElementById("themeText");
+
+      function applyTheme(theme) {
+        htmlEl.setAttribute("data-bs-theme", theme);
+        localStorage.setItem("tvu_bs_theme", theme);
+        if (themeIcon && themeText) {
+          themeIcon.className = theme === "dark" ? "bi bi-sun-fill text-warning" : "bi bi-moon-stars-fill";
+          themeText.textContent = theme === "dark" ? "Sáng" : "Tối";
+        }
+      }
+
+      applyTheme(localStorage.getItem("tvu_bs_theme") || "light");
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", function () {
+          const next = htmlEl.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+          applyTheme(next);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

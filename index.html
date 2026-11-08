@@ -1,161 +1,229 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-bs-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ - Học Bootstrap 5 - Đề Tài Cơ Sở Ngành TVU</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="scr/CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ - Học Bootstrap 5.3 Responsive - TVU</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="scr/CSS/style.css" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-tvu sticky-top shadow-sm py-2">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+          <i class="bi bi-mortarboard-fill text-warning me-2 fs-5"></i>
+          <span>TVU - CƠ SỞ NGÀNH CNTT</span>
+        </a>
+        <div class="d-flex align-items-center order-lg-3 ms-auto ms-lg-3">
+          <button class="btn btn-outline-light btn-sm me-2" id="themeToggleBtn" type="button">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            <span class="ms-1" id="themeText">Tối</span>
+          </button>
+          <a class="btn btn-warning btn-sm fw-semibold me-2 me-lg-0" href="scr/HTML/feedback.html">
+            Góp ý
+          </a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#tvuNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="tvuNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Trang chủ</a></li>
+            <li class="nav-item"><a class="nav-link" href="scr/HTML/grid.html">Hệ thống Lưới</a></li>
+            <li class="nav-item"><a class="nav-link" href="scr/HTML/components.html">Thành phần UI</a></li>
+            <li class="nav-item"><a class="nav-link" href="scr/HTML/utilities.html">Lớp Tiện ích</a></li>
+            <li class="nav-item"><a class="nav-link" href="scr/HTML/evaluation.html">Đánh giá & So sánh</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-tvu sticky-top shadow-sm py-2">
-            <div class="container-fluid px-lg-4">
-                <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                    <i class="bi bi-mortarboard-fill text-warning me-2 fs-4"></i>
-                    <span>TVU - CƠ SỞ NGÀNH CNTT</span>
-                </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#tvuNavbarContent" aria-controls="tvuNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="tvuNavbarContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="scr/HTML/grid.html">Hệ thống Lưới</a></li>
-                        <li class="nav-item"><a class="nav-link" href="scr/HTML/components.html">Các Thành Phần</a></li>
-                        <li class="nav-item"><a class="nav-link" href="scr/HTML/utilities.html">Các Lớp Tiện Ích</a></li>
-                        <li class="nav-item"><a class="nav-link" href="scr/HTML/evaluation.html">Đánh giá</a></li>
-                    </ul>
-                    <a href="scr/HTML/feedback.html" class="btn btn-warning btn-sm ms-lg-3 fw-semibold">
-                        <i class="bi bi-pencil-square me-1"></i> Đóng góp ý kiến
-                    </a>
-                </div>
+  <div class="container my-4">
+    <div class="row g-4">
+        <aside class="col-12 col-lg-3">
+          <div class="d-lg-none mb-2">
+            <button class="btn btn-outline-primary w-100 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+              Danh mục bài học
+            </button>
+          </div>
+          <div class="collapse d-lg-block" id="sidebarMenu">
+            <div class="sidebar-sticky shadow-sm">
+              <div class="sidebar-title">Danh mục bài học</div>
+              <div class="list-group list-group-tvu list-group-flush">
+              <a class="list-group-item list-group-item-action active" href="index.html">Tổng quan & Lịch sử</a>
+              <a class="list-group-item list-group-item-action" href="scr/HTML/grid.html">1. Hệ thống Lưới</a>
+              <a class="list-group-item list-group-item-action" href="scr/HTML/components.html">2. Thành phần UI</a>
+              <a class="list-group-item list-group-item-action" href="scr/HTML/utilities.html">3. Lớp Tiện ích</a>
+              <a class="list-group-item list-group-item-action" href="scr/HTML/evaluation.html">4. Đánh giá & So sánh</a>
+              <a class="list-group-item list-group-item-action" href="scr/HTML/feedback.html">5. Thực hành Form</a>
+              </div>
+              <div class="mt-3 pt-3 border-top small text-muted">
+                <div class="fw-semibold text-primary mb-1">Thông tin Đồ án</div>
+                <div>SV: Nguyễn Quốc Nam</div>
+                <div>MSSV: 110124128</div>
+                <div>Lớp: DA24TTC</div>
+                <div>GVHD: TS. Đoàn Phước Miền</div>
+              </div>
             </div>
-        </nav>
-    </header>
+          </div>
+        </aside>
 
-    <div class="container-fluid px-lg-4 mt-3">
-        <div class="row g-3">
+      <main class="col-12 col-lg-9">
+        <section class="hero-banner shadow-sm mb-4">
+          <div class="mb-2">
+            <span class="badge bg-warning text-dark me-2">Đồ án Cơ sở ngành CNTT</span>
+            <span class="badge bg-light text-primary">Bootstrap v5.3.3</span>
+          </div>
+          <h1 class="h2 fw-bold mb-2">Tìm hiểu và ứng dụng Bootstrap trong thiết kế giao diện Web Responsive</h1>
+          <p class="mb-3 opacity-90">
+            Hệ thống học tập trực quan minh họa kiến trúc Lưới 12 cột, Thành phần giao diện và Lớp tiện ích của Bootstrap 5.3 trên Máy tính, Máy tính bảng và Điện thoại di động.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-warning fw-semibold px-3" href="scr/HTML/grid.html">Bắt đầu bài học</a>
+            <a class="btn btn-outline-light px-3" href="scr/HTML/evaluation.html">Xem bảng so sánh</a>
+          </div>
+        </section>
 
-            <aside class="col-12 col-md-4 col-lg-3 col-xl-2">
-                <div class="sidebar-sticky shadow-sm">
-                    <div class="sidebar-title">
-                        <i class="bi bi-journal-code me-1"></i> Danh mục bài học
-                    </div>
-                    <div class="list-group list-group-tvu list-group-flush" id="learningMenu">
-                        <a href="index.html" class="list-group-item list-group-item-action active">
-                            <i class="bi bi-chevron-right me-1 small"></i> Tổng quan
-                        </a>
-                        <a href="scr/HTML/grid.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 1. Hệ thống Grid
-                        </a>
-                        <a href="scr/HTML/components.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 2. Các Thành Phần
-                        </a>
-                        <a href="scr/HTML/utilities.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 3. Cá Lớp Tiện Ích
-                        </a>
-                        <a href="scr/HTML/evaluation.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 4. Đánh giá Ưu điểm
-                        </a>
-                        <a href="scr/HTML/feedback.html" class="list-group-item list-group-item-action">
-                            <i class="bi bi-chevron-right me-1 small"></i> 5. Thực hành Form
-                        </a>
-                    </div>
+        <section class="mb-4">
+          <h2 class="section-heading">1. Thiết kế Web Đáp ứng và Mục đích sử dụng Bootstrap</h2>
+          <div class="content-card shadow-sm">
+            <div class="row g-3">
+              <div class="col-12 col-md-7">
+                <p class="mb-2">
+                  <strong>Thiết kế Web Đáp ứng</strong> là phương pháp xây dựng một mã nguồn trang web duy nhất có khả năng tự động co giãn và sắp xếp lại bố cục hiển thị tối ưu trên mọi kích thước màn hình.
+                </p>
+                <p class="mb-2">
+                  <strong>Mục đích sử dụng Bootstrap:</strong> Chuẩn hóa quy ước định kiểu giao diện trong nhóm phát triển, đảm bảo tương thích đa thiết bị và rút ngắn từ 60% đến 70% thời gian viết mã CSS thủ công.
+                </p>
+                <div class="code-box mt-2">
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
                 </div>
-            </aside>
+              </div>
+              <div class="col-12 col-md-5">
+                <div class="p-3 bg-light rounded border h-100">
+                  <h6 class="fw-bold text-primary mb-2">Ba trụ cột của Bootstrap 5.3</h6>
+                  <ul class="small mb-0 ps-3">
+                    <li class="mb-2"><strong>Grid System:</strong> Lưới Flexbox 12 cột với 6 mức điểm ngắt linh hoạt.</li>
+                    <li class="mb-2"><strong>Components:</strong> Hơn 20 khối giao diện tương tác qua thuộc tính <code>data-bs-*</code>.</li>
+                    <li><strong>Utilities &amp; Dark Mode:</strong> Lớp tiện ích nguyên tử và chế độ Sáng/Tối nguyên bản.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <main class="col-12 col-md-8 col-lg-9 col-xl-10">
+        <section class="mb-4">
+          <h2 class="section-heading">2. Tiến trình phát triển từ Bootstrap 1 đến Bootstrap 5.3</h2>
+          <div class="content-card shadow-sm">
+            <div class="table-responsive">
+              <table class="table table-bordered breakpoint-table align-middle mb-0">
+                <thead class="text-center">
+                  <tr>
+                    <th>Phiên bản</th>
+                    <th>Năm</th>
+                    <th>Cải tiến kiến trúc trọng tâm</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-semibold text-center">Bootstrap 1 &amp; 2</td>
+                    <td class="text-center">2011–2012</td>
+                    <td>Khởi đầu chuẩn hóa Typography, nút bấm và bổ sung lưới 12 cột <code>.row-fluid</code> theo hướng Desktop-First.</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold text-center">Bootstrap 3</td>
+                    <td class="text-center">2013</td>
+                    <td>Chuyển sang triết lý Mobile-First và Flat Design; lưới 4 mức điểm ngắt dựa trên CSS Float.</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold text-center">Bootstrap 4</td>
+                    <td class="text-center">2018</td>
+                    <td>Thay thế Float bằng CSS Flexbox, chuyển sang SASS, đơn vị <code>rem</code>, thành phần Card và 5 mức điểm ngắt.</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold text-center">Bootstrap 5.3</td>
+                    <td class="text-center">2021–nay</td>
+                    <td>Loại bỏ hoàn toàn jQuery, dùng Vanilla JS ES6, thêm mức <code>xxl</code>, lớp <code>.g-*</code>, Utility API và Native Dark Mode.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
 
-                <section class="hero-banner text-white p-4 p-lg-5 mb-4 shadow-sm">
-                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-3">Đề tài Cơ sở ngành</span>
-                    <h1 class="display-6 fw-bold mb-2">Tìm hiểu và ứng dụng Bootstrap trong thiết kế Web Responsive</h1>
-                    <p class="fs-6 opacity-75 col-lg-10 mb-4">
-                        Trang web được thiết kế bằng <strong>HTML5, CSS3 và Bootstrap 5</strong>, trình bày kiến thức lý thuyết song song với các ví dụ thực hành trực quan, tương thích trên Máy tính, Máy tính bảng và Điện thoại thông minh.
-                    </p>
-                    <a href="scr/HTML/grid.html" class="btn btn-light text-primary fw-bold px-4 py-2 me-2">Bắt đầu học <i class="bi bi-arrow-right ms-1"></i></a>
-                </section>
+        <section>
+          <h2 class="section-heading">3. Lộ trình 5 chuyên trang thực hành</h2>
+          <div class="row g-3">
+            <div class="col-12 col-md-4">
+              <div class="content-card shadow-sm h-100">
+                <h6 class="fw-bold text-primary">Bài 1: Hệ thống Lưới</h6>
+                <p class="small text-muted mb-2">Thực hành cấu trúc Container, Row, Column và bộ đo Breakpoint trực tiếp.</p>
+                <a class="btn btn-sm btn-outline-primary" href="scr/HTML/grid.html">Xem bài học</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="content-card shadow-sm h-100">
+                <h6 class="fw-bold text-primary">Bài 2: Thành phần UI</h6>
+                <p class="small text-muted mb-2">Trải nghiệm Card, Accordion, Modal, Offcanvas, Alert và Progress.</p>
+                <a class="btn btn-sm btn-outline-primary" href="scr/HTML/components.html">Xem bài học</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="content-card shadow-sm h-100">
+                <h6 class="fw-bold text-primary">Bài 3: Lớp Tiện ích</h6>
+                <p class="small text-muted mb-2">Quy tắc Spacing, Flexbox và bàn thử nghiệm Utility trực quan.</p>
+                <a class="btn btn-sm btn-outline-primary" href="scr/HTML/utilities.html">Xem bài học</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                <section class="mb-5">
-                    <span class="section-tag section-tag--theory">Lý thuyết</span>
-                    <h3 class="section-heading mb-3">Bootstrap là gì?</h3>
-                    <div class="content-card p-4 shadow-sm">
-                        <div class="row g-4">
-                            <div class="col-lg-7">
-                                <p>Bootstrap là một <strong>framework CSS (và JavaScript) mã nguồn mở</strong>, được xây dựng bởi hai kỹ sư của Twitter là Mark Otto và Jacob Thornton, ra mắt lần đầu vào tháng 8/2011. Mục tiêu ban đầu là tạo ra một bộ công cụ thống nhất giúp các lập trình viên nội bộ của Twitter xây dựng giao diện nhanh và đồng bộ.</p>
-                                <p>Bootstrap cung cấp sẵn hệ thống lưới (Grid System), các thành phần giao diện dựng sẵn (Components) và các lớp tiện ích (Utility Classes), giúp lập trình viên không cần viết lại CSS từ đầu cho những tác vụ phổ biến như căn chỉnh bố cục, tạo nút bấm, biểu mẫu hay thanh điều hướng.</p>
-                                <p class="mb-0">Phiên bản được sử dụng trong đề tài này là <strong>Bootstrap 5.3</strong> — phiên bản đã loại bỏ hoàn toàn sự phụ thuộc vào jQuery, chuyển sang JavaScript thuần và hỗ trợ chế độ màu tối (dark mode) gốc.</p>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="bg-light p-3 rounded border">
-                                    <h6 class="fw-bold text-primary mb-2"><i class="bi bi-info-circle me-1"></i> Ba trụ cột của Bootstrap</h6>
-                                    <ul class="mb-0">
-                                        <li><strong>Grid System:</strong> chia bố cục 12 cột, responsive.</li>
-                                        <li><strong>Components:</strong> navbar, card, modal, form...</li>
-                                        <li><strong>Utilities:</strong> các class tiện ích nhỏ (spacing, màu, flex...).</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="mb-4">
-                    <h3 class="section-heading mb-3">Nội dung bài học</h3>
-                    <div class="row g-3">
-                        <div class="col-12 col-md-6 col-xl-3">
-                            <a href="scr/HTML/grid.html" class="nav-card">
-                                <div class="content-card h-100 p-3 shadow-sm">
-                                    <i class="bi bi-grid-3x3-gap-fill fs-3 text-primary mb-2"></i>
-                                    <h6 class="fw-bold mb-1">1. Hệ thống Grid</h6>
-                                    <p class="text-muted small mb-0">Container, row, column, breakpoint và ví dụ bố cục responsive.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3">
-                            <a href="scr/HTML/components.html" class="nav-card">
-                                <div class="content-card h-100 p-3 shadow-sm">
-                                    <i class="bi bi-window-stack fs-3 text-success mb-2"></i>
-                                    <h6 class="fw-bold mb-1">2. Các Thành Phần</h6>
-                                    <p class="text-muted small mb-0">Navbar, card, accordion, modal, alert - demo tương tác thật.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3">
-                            <a href="scr/HTML/utilities.html" class="nav-card">
-                                <div class="content-card h-100 p-3 shadow-sm">
-                                    <i class="bi bi-sliders fs-3 text-warning mb-2"></i>
-                                    <h6 class="fw-bold mb-1">3. Các Lớp Tiện Ích</h6>
-                                    <p class="text-muted small mb-0">Spacing, màu sắc, flexbox và hiển thị responsive.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3">
-                            <a href="scr/HTML/evaluation.html" class="nav-card">
-                                <div class="content-card h-100 p-3 shadow-sm">
-                                    <i class="bi bi-bar-chart-fill fs-3 text-danger mb-2"></i>
-                                    <h6 class="fw-bold mb-1">4. Đánh giá</h6>
-                                    <p class="text-muted small mb-0">Ưu điểm, hạn chế và so sánh với CSS thuần.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
-            </main>
-        </div>
+        <nav class="page-nav-bottom shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-2" aria-label="Điều hướng chuyển trang">
+          <span class="small text-muted fw-semibold">Bắt đầu lộ trình học Bootstrap 5.3</span>
+          <a class="btn btn-light border btn-sm text-secondary" href="#">Lên đầu trang</a>
+          <a class="btn btn-primary fw-semibold" href="scr/HTML/grid.html">Tiếp theo: Bài 1 - Hệ thống Lưới <i class="bi bi-arrow-right ms-1"></i></a>
+        </nav>
+      </main>
     </div>
+  </div>
 
-    <footer class="footer-tvu py-4 text-center">
-        <div class="container">
-            <p class="fw-bold mb-1">TRƯỜNG ĐẠI HỌC TRÀ VINH - KHOA CÔNG NGHỆ THÔNG TIN</p>
-            <p class="small mb-1 opacity-75">Báo cáo Đề tài Cơ sở ngành: Tìm hiểu và ứng dụng Bootstrap trong thiết kế giao diện Web Responsive</p>
-            <p class="small text-warning mb-0">Thiết kế hoàn thiện bằng HTML5, CSS3 & Bootstrap 5</p>
-        </div>
-    </footer>
+  <footer class="footer-tvu py-4 text-center">
+    <div class="container">
+      <p class="fw-bold mb-1">TRƯỜNG ĐẠI HỌC TRÀ VINH - KHOA CÔNG NGHỆ THÔNG TIN</p>
+      <p class="small mb-1 opacity-75">Đồ án Cơ sở ngành: Tìm hiểu và ứng dụng Bootstrap trong thiết kế giao diện Web Responsive</p>
+      <p class="small mb-0 text-warning">Sinh viên thực hiện: Nguyễn Quốc Nam - MSSV: 110124128 - GVHD: TS. Đoàn Phước Miền</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      const htmlEl = document.documentElement;
+      const toggleBtn = document.getElementById("themeToggleBtn");
+      const themeIcon = document.getElementById("themeIcon");
+      const themeText = document.getElementById("themeText");
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      function applyTheme(theme) {
+        htmlEl.setAttribute("data-bs-theme", theme);
+        localStorage.setItem("tvu_bs_theme", theme);
+        if (themeIcon && themeText) {
+          themeIcon.className = theme === "dark" ? "bi bi-sun-fill text-warning" : "bi bi-moon-stars-fill";
+          themeText.textContent = theme === "dark" ? "Sáng" : "Tối";
+        }
+      }
+
+      applyTheme(localStorage.getItem("tvu_bs_theme") || "light");
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", function () {
+          const next = htmlEl.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+          applyTheme(next);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
